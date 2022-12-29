@@ -1,4 +1,4 @@
-let, var vs const**
+let, var vs const
 
 let a = 10; // is the latest data type
 
@@ -8,14 +8,14 @@ const c = 5; // constant variable meaning not changeable
 
 c = 8; // it turns error
 
-
-
-**DATA TYPES**
+__________
+DATA TYPES
+__________
 
 let x = 8;
 
 console.log(typeof x)
-print statement** | console.log("Rye Ryan"); 
+print statement| console.log("Rye Ryan"); 
 
 **to run a code** | node filename.js // excluded.js
 
@@ -53,7 +53,6 @@ node data types
 -- boolean
 
 -- string
-
 
 
 let a;
