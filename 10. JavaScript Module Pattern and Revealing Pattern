@@ -1,0 +1,100 @@
+________________________________________
+GLOBAL SCOPE: PRECAUTIONS IN WEB BROWSER
+________________________________________
+
+1. Each variable that you define in the global scope is not removed from the computer's memory until the web browser or tab pages navigates to a new web pages
+2.  The more you add at the global scope the more memory are taking up consumed the entire time is open
+3. As you load JavaScript that you wrote and rely on JavaScript or you made a file with libraries extension that you download at the internet the variables and the function defined in those files.
+4. The more you write at the global scope without precautions it may cause "naming collisions" your data will be overwritten by their code it may cause unexpected bug 
+
+_______________________________________
+MODULE PATTERN AND REVEALING PATTERN
+_______________________________________
+
+// MODULE PATTERN
+
+var counter = (function() {
+
+    // PRIVATE STUFF
+    let count = 0;
+
+    function print(message) {
+	console.log(message + '---' + count);
+    }
+
+    // RETURN AN OBJECT	
+    return {
+       // VALUE: COUNT,
+       get: function() { return count; },
+       set: function(value) { count = value; },
+       
+       increment: function() {
+	   count += 1;
+           print('After Increment: ');
+       },
+
+       reset: function() {
+           print('Before Reset: ');
+           count = 0;
+           print('After Reset: ');
+       }
+     }
+})();
+
+// console.log(counter.count);
+
+counter.increment();
+counter.increment();
+counter.increment();
+
+// Accidentally creaetd a closure
+// console.log(counter.value);
+
+counter.set(7);
+console.log(counter.get());
+
+counter.reset();
+
+/////////////////////////////////////////////////////////////
+
+// REVEALING MODULE
+
+var counter = (function() {
+
+    let count = 0;
+
+    function print(message) {
+	console.log('${message} => {count}');
+    }
+
+    function getCount() { return count; }
+
+    function setCount(value) { count = value; }
+
+    function incrementCount() {
+	count += 1;
+	print('After Increment: ');
+    }
+
+    function resetCount() {
+        print('Before reset: ');
+        count = 0;
+        print('After reset: ');
+    }
+
+    // "reveals" the public functions
+    // clearer presentation
+    // however, you can (accidentally) overwrite
+    // the property values
+
+    return {
+	get: getCount,
+        set: setCount,
+        increment: incrementCount,
+        reset: resetCount
+    };
+
+})();
+
+console.log(counter);
+console.log(counter.get());
