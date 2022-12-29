@@ -1,0 +1,63 @@
+BASICS OF SCOPE
+
+// SCOPE
+
+let a = 'first';
+
+function scopeTest() {
+    console.log(a);
+    
+    let b = "second";
+}
+
+scopeTest();
+//console.log(b) // thrown an error because the 'let b = "second";' was inside the function ScopeTest() 
+
+// SCOPE WITH IF STATMENT
+
+let b = 'first';
+
+function scopeTest2() {
+    console.log(b);
+    
+    if (b != '') {
+        console.log(b);
+    }
+}
+
+scopeTest2(); // first. first.
+
+// SCOPE CHANGED VARIABLE
+
+let c = 'first';
+
+function scopeTest3() {
+    console.log(c); // first
+    c = 'changed';
+    
+    if (c != '') {
+        console.log(c); // changed
+    }
+}
+
+scopeTest3(); // first, changed
+console.log(c); // changed
+
+// SCOPE WITH "INSIDE IF"
+
+let d = 'first';
+
+function scopeTest4() {
+    console.log(d); // first
+    d = 'changed';
+    
+    let e = 'another changed added';
+    if (d != '') {
+        console.log(d); // changed
+        console.log('inside if: ' + d)
+        let c = 'third'
+    }
+}
+
+scopeTest4(); // first, changed
+console.log(c); // changed
