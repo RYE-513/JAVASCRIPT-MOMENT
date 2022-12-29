@@ -1,4 +1,6 @@
+________________
 TYPE CONVERSION
+________________
 
 // coercion.js
 
@@ -35,7 +37,10 @@ console.log(d); // NaN
 
 console.log(e); // True
 
+_______________
 INCREMENTATION
+_______________
+
 var a = 1;
 
 a++; // +1
@@ -52,7 +57,9 @@ console.log(++b); // 3
 
 console.log(b); // 3
 
+____________________
 TYPES OF EXPRESSION
+____________________
 
 a; // this is bad
 
