@@ -1,0 +1,61 @@
+_______________________
+CONSTRUCTTOR FUNCTION
+_______________________
+
+let car = {
+    make: 'bmw',
+    model: '745li',
+    year: 2010,
+};
+
+function Car(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+}
+
+let myCar = new Car('bmw', '745li', 2010);
+
+console.log(myCar);
+// Car { make : 'bmw', model : '745li', year : 2010 }
+
+///////////////////////////////////////////////
+function ryanFunction() {
+        console.log('I am a simple function');
+}
+let ryeFunction = new ryanFunction();
+console.log(typeof ryeFunction); // object
+
+// Can't really do anything with this particular
+// object. it's certainly NOT a function reference anymore
+// ryeFunction(); turns an error
+
+________________
+PROTOTYPE CHAIN
+________________
+
+// Objects Linking to Other Objects
+
+let originalCar = {
+       make = 'bmw',
+       model = '745li',
+       year = 2010
+};
+
+let newCar = Object.create(originalCar);
+console.log(newCar.make); // bmw
+console.log(Object.getPrototypeOf(newCar));
+// { make : 'bmw', model : '745li', year : 2010 }
+
+let myPrototype = Object.getPrototypeOf(newCar);
+console.log(myPrototype.make);
+
+newCar.make = 'hummer';
+console.log(newCar.make);
+console.log(newCar.whatever); // Undefined
+
+originalCar.doors = 4;
+console.log(newCar.doors); //;4
+
+console.log(originalCar.hasOwnProperty('doors')); // True
+console.log(newCar.hasOwnProperty('doors')); // False
