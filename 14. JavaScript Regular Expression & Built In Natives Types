@@ -1,0 +1,49 @@
+____________________
+REGULAR EXPRESSION
+____________________
+
+// refered as RegX
+
+let pattern = /xyz/;
+console.log(pattern); // /xyz/
+console.log(typeof pattern); // object
+
+•••
+
+let pattern = /xyz/;
+
+let value = 'This is xyz test.';
+console.log(pattern.test(value)); // True
+console.log(value.replace(pattern, 'just')); // This is just test
+
+console.log(value.match(pattern));
+// [ 'xyz', index : 8, input: 'This is xyz test.' ]
+
+var match = value.match(pattern);
+console.log(match.index); // 8
+
+______________________
+BUILT IN NATIVE TYPES
+______________________
+
+//Boxing converts a value or primitive type to the type object
+
+// let myString = new String("Rye Ryan"); - object string
+// let myString = "Rye Ryan"; - primitive string
+
+let pattern = /xyz/;
+let value = 'This is xyz a test.'; console.log(value.replace(pattern, 'just'));
+
+let myString = new String('howdy'); // native function
+console.log(myString); // [String: 'Howdy']
+console.log(myString.toString()); // Howdy become primitive string
+
+let myPrimitive = 'THIS IS CRAZY';
+console.log(typeof myPrimitive); // String 
+myPrimitive = myPrimitive.toLowerCase();
+console.log(typeof myPrimitive); // String
+
+let myNumber = new Number(8);
+console.log(typeof myNumber); // "object" because of "new" keyword
+let myPrimitive = myNumber.valueOf(); 
+console.log(typeof myPrimitive) // "number" because of "valueOf();"
