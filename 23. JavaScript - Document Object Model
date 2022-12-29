@@ -1,0 +1,97 @@
+• the nodes that represent our document to modify them
+to add new nodes and remove as well as the web browser as a whole in all the functionality that it provides to us like to manipulate things like history and console window and any debugging windows that available and that is the essence of "Document Object Model"
+
+// intro-dom.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv"X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Header</h1>
+  <ul>
+       <li>One</li>
+       <li>Two</li>
+       <li>Three</li>
+   </ul>
+   <button onclick="console.log('Hi from console')">Click Me</button>
+  <p>
+</body>
+</html>
+
+<!-- Press 'f12' or inspect then click the "console tab"-->
+
+// intro-dom2.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv"X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Header</h1>
+  <ul>
+       <li>One</li>
+       <li>Two</li>
+       <li>Three</li>
+   </ul>
+   <button onclick="clickHandler('from the button click event')">Click Me</button>
+  <script>
+     
+         function clickHandler(message) {
+               console.log('hi  ... ' + message);
+         }
+
+  </script>
+
+</body>
+</html>
+
+<!-- Click the button -->
+<!-- Press 'f12' or inspect then click the "console tab"-->
+
+// intro-dom3.html - separate js files
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv"X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Header</h1>
+  <ul>
+       <li>One</li>
+       <li>Two</li>
+       <li>Three</li>
+   </ul>
+   <button id="myButton">Click Me</button>
+   <script type="text/javascript" src="dom-intro.js"></script>
+</body>
+</html>
+
+// dom-intro.js
+
+function clickHandler(message) {
+               console.log('hi  ... ' + message);
+         }     
+         // Get a reference to myButton
+         let myButton =
+ document.getElementById('myButton');
+         //myButton.addEventListener('click', clickHandler);
+         myButton.addEventListener('click', function() { clickHandler('hi from iffe') } );
+
+})();
+
+<!-- Click the button -->
+<!-- Press 'f12' or inspect then click the "console tab"-->
+<!-- Output: hi ... [hi ... hi from iffe] -->
