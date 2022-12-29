@@ -1,0 +1,47 @@
+
+print statement** | console.log("Rye Ryan"); 
+
+**to run a code** | node filename.js // excluded.js
+
+**naming variable rules**
+
+1. all identifiers will begin with letter, dollar sign, underscore
+
+2. the variablea can contain numbers or letters dollar signs or underscores but no special characters you can't use between space
+
+3. you can't name a data type like let let a = 13
+
+4. variable name are case sensitive
+
+5. Naming Conventions ***camelCase***
+
+e g.
+
+let firstName = "Rye";
+
+let lastName = "Ryan";
+let y = true;
+
+console.log(typeof y);
+
+let z = "Rye Ryan";
+
+console.log(typeof z);
+
+Console Input
+
+node data types
+
+-- number
+
+-- boolean
+
+-- string
+
+
+
+let a;
+
+console.log(a) // undefined
+
+console.log(typeof a) // undefined
