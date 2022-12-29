@@ -1,0 +1,43 @@
+_______________
+ARROW FUNCTIONS
+_______________
+
+// Shorthand version of class expression
+
+// METHOD 1
+
+let hi = () => { console.log('howdy') }
+hi();
+
+// METHOD 2
+
+let hi = (name) => { console.log(`howdy ${name}`) };
+hi('bob'); // howdy bob
+
+// METHOD 3
+
+let add = (a, b) => { return a + b };
+console.log(add(7, 3)); // 10
+
+// METHOD 4
+
+let names = [ 'rye', 'ryan', 'amogus', 'bscs' ];
+names.map(name) => { console.log(`howdy ${name}!`) } ); // howdy rye!  howdy ryan!  howdy amogus!  howdy bscs!
+
+// METHOD 5
+
+let names = [ 'rye', 'ryan', 'amogus', 'bscs' ];
+let i = 0;
+names.map((name) => { i++; console.log(`howdy ${name} ${i}!`); } ); // howdy bscs 4! , 4 is items in let names
+
+// METHOD 6
+
+let names = [ 'rye', 'ryan', 'amogus', 'bscs' ];
+var transformed = names.map((name) => { return `howdy ${name}!` });
+console.log(transformed);
+
+/* [ 'howdy rye!',
+     'howdy ryan!',
+     'howdy amogus!',
+     'howdy bscs!' ]
+*/
