@@ -1,0 +1,39 @@
+let names = [ 'rye', 'ryan', 'bscs', 'amogus', 'eros' ];
+let others = [ 'rye1', 'rye2', 'rye3', 'rye4' ];
+
+let lost = [ 4, 8, 15, 16, 23, 42 ];
+let fibonacci = [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ];
+
+var combine = lost.concat(fibonacci);
+console.log(combine); // [ 4, 8, 15, 16, 23, 42, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
+
+console.log(fibonacci.join('~')); // 1~1~2~3~5~8~13~21~34~55
+
+// PUSH & POP
+
+console.log(lost.shift()); // it removes the first index in array.
+console.log(lost); [8, 15, 16, 23, 42 ];
+
+lost.unshift(1, 2, 3, 4); // added this items at the first index
+console.log(lost); //  [ 1, 2, 3, 4, 8, 15, 16, 23, 42 ]
+
+console.log(names); // [ 'rye', 'ryan', 'bscs', 'amogus', 'eros' ]
+console.log(names.reverse); [ 'amogus', 'eros', 'rye', 'ryan', 'bscs', ]
+
+console.log(othets.indexOf('rye3')); // 2
+
+console.log(combined); 
+console.log(combined.lastIndexof(1)); // 7
+
+// ARROW FUNCTIONS ARRAY METHODS
+
+var filtered = combine.filter((x) => { if (x <= 15) return x; } );
+console.log(filtered); // 4, 8, 15, 1, 1, 2, 3, 5, 8, 13 ]
+
+names.forEach((name_ => console.log(`howdy %{name}`) ); howdy ryan ..... howdy eros
+
+console.log(filtered.every((num) => num < 10 )); // false
+console.log(filtered.every((num) => num < 16 )); // true
+
+console.log(fibonacci.some((num) => num < 50 )); // true
+console.log(fibonacci.some((num) => num < 100 )); // false
