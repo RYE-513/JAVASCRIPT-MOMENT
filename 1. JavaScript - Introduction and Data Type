@@ -1,4 +1,20 @@
+let, var vs const**
 
+let a = 10; // is the latest data type
+
+var b = 3; // is the oldest data type
+
+const c = 5; // constant variable meaning not changeable
+
+c = 8; // it turns error
+
+
+
+**DATA TYPES**
+
+let x = 8;
+
+console.log(typeof x)
 print statement** | console.log("Rye Ryan"); 
 
 **to run a code** | node filename.js // excluded.js
