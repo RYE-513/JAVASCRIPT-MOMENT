@@ -1,0 +1,143 @@
+________
+CLOSURES
+________
+
+function sayHello(name) {
+   return function() {
+       console.log('amogus ' + name);
+   }
+}
+
+let rye = sayHello('Rye');
+let ryan = sayHello('Ryan');
+let bscs = sayHello('BSCS');
+
+rye();
+ryan();
+bscs();
+
+____________
+THIS KEYWORD
+____________
+
+// "this" keyword is a given function is called will determine what this represent
+// alt + shift + a - to comment the whole specific code
+
+/*
+let car = {
+    make: 'bmw',
+    model: '745li',
+    year: 2010,
+    getPrice: function() {
+       return 5000; // perform some calculation
+    },
+    printDescription: function() {
+	console.log(this.make + ' ' + this.model);
+    }
+}
+
+car.printDescription(); // Method Invocation
+*/
+
+function first() {
+      return this;
+}
+console.log(first() === globe);  // true
+
+// this is node global object
+// because that's where
+// first method was called
+
+function second() {
+      "use strict";
+      return this;
+}
+console.log(second() === globe); // false
+console.log(second() === undefined); // true
+
+// this depends on HOW a function called.
+// an object can be passed as the first argument to call
+// or apply this will be bound to it
+
+let myObject = { value: 'My Object' };
+
+// this property/value is set on the global object
+global.value = 'Global object';
+
+function third() {
+      // return something different depending
+      // on how we call this method
+      return this.value;
+}
+
+console.log(third()); // Global object
+
+// Both call and apply allow you to explicitly set 
+// what you want to represent 'this'. The difference
+ // is in how additional arguments to the function are sent.
+
+console.log(third.call(myObject)); // My Object
+console.log(third.apply(myObject)); // My Object
+
+// WITH NAME
+
+function third(name) {
+      return this.value + name;
+}
+
+console.log(third()); // Global object undefined
+console.log(third.call(myObject), 'bob'); // My Objectbob
+console.log(third.apply(myObject, ['bob'])); // My Objectbob
+
+function fourth() {
+       console.log(this.firstname + '  ' + this.lastname);
+}
+
+let customer1 = {
+      firstname: 'Rye',
+      lastname: 'Ryan',
+      print: fourth
+}
+
+let customer2 = {
+      firstname: 'John',
+      lastname: 'Johny',
+      print: fourth
+}
+
+customer2.print(); // John Johny
+customer1.print(); // Rye Ryan
+
+// this-keyword.html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+</head>
+
+<body>
+          <button onclick="clickHandler(this)">Click me</button>
+         <script>
+               function clickHandler(arg) {
+                       console.log(arg);
+                       console.log(arg.innerText); // shows click me
+                       console.log(this); 
+// [object window] {$0 Object, $1: undefined.... $4: undefined...} - shows child object window
+
+         </script>
+</body>
+</html>
+
+// this file 'this-keyword.html' open it in browser
+// open inspect "f12"
+// click the tab 'console'
+// click the tab 'log'
+// press the 'click me' button
+
+// the result is...
+// <button onclick="clickHandler(this)">Click me</button>
