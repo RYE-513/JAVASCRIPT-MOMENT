@@ -1,0 +1,57 @@
+__________
+NULL VALUE
+__________
+
+/* Data type 'null' is not '0' it's not undefined
+it's not an empty string it simply means
+that you have a variable where an object reference
+was expected but it's not set to any object reference
+it's different than undefined. because says i'm expecting
+to have a value but one was never set and it was object reference.
+*/
+
+/* let a;
+console.log(a);
+console.log(typeof a); */
+
+let pattern = /xyz/;
+let value = 'This is just a test';
+let result = value.match(pattern);
+
+console.log(result); // null
+console.log(typeof result); // object
+
+if (result === null) {
+    console.log('no match was found'); // mo match was found
+}
+
+__________
+DATE OBJECT
+__________
+
+let today = New Date();
+
+let rye = new Date('December 7, 1969 07:01:23);
+
+
+let rye = new Date('1969-12-07T07:01:23' 15:01:23);
+let rye = new Date(1969, 11, 6);
+let rye = new Date(1969, 11, 6, 7, 1, 23);
+
+var elapsedTime = today - rye;
+console.log(elapsedTime);
+
+// GET PARTS
+
+console.log(rye.getDate()); // Monday = 1, Sunday = 7
+console.log(rye.getTime());
+
+/*
+getMonth()
+getDay()
+
+getHours()
+getMinutes()
+getSeconds()
+getMilliseconds()
+*/ 
