@@ -1,0 +1,47 @@
+__________________
+DECISION STATEMENT
+__________________
+
+// CONDITION STATEMENT
+
+var count = 3;
+if (count == 4) {
+        console.log('count is 4');
+} else if (count < 4) {
+        console.log('console is less than to 4')
+} else if (count > 4) {
+        console.log('console is greater than to 4')
+} else {
+        console.log('count is not 4')
+}
+
+// SWITCH STATMENT
+
+let hero= 'superman';
+
+switch(hero) {
+          case 'superman':
+                   console.log('Super Strength');
+                   console.log('X-ray Vision');
+                   break; // without this "break" other case will be shown
+          case 'batman':
+                  console.log('Intelligent');
+                  console.log('Fighting Skills');
+                  break;
+          default:
+                 console.log('Member of JLA');
+
+// TERNARY OPERATOR
+           
+let a = 1, b = "1";
+let result = (a == b) ? "equal" : "not equal";
+// or, print((a == b) ? "equal" : "not equal");
+print(result) // equal because same value but diff data type.
+
+let a = 1, b = "1";
+let result = (a === b) ? "equal" : "not equal";
+print(result) // inequal, because "===" focuses on data type
+
+let a = 1, b = "1";
+let result = (a !== b) ? "not equal" : "equal";
+print(result) // not equal
