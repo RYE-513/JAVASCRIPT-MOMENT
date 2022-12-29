@@ -1,0 +1,52 @@
+RETURNING FUNCTIONS FROM FUNCTION
+
+// DON'T DO THIS
+
+/*
+var myVariable = 'I am the global scope';
+
+var myFunction = function() {
+    console.log('me too!');
+}
+
+myFunction()
+*/
+
+// NORMAL FUNCTION 
+
+function one() {
+    return 'one';
+}
+
+let value = one();
+console.log(value); // or console.log(one())
+
+// FUNCTION NOT DECLARED AS STRINGS
+
+function one() {
+    return 'one';
+}
+
+let values = one; // this 'one' has no ('') 
+console.log(values()) // because of this values'()' invocation
+
+// DOUBLE FUNCTION
+
+function nested_func() {
+    return function() {
+        console.log('Rye Ryan BSCS III');
+    }
+}
+
+let myFunction = nested_func(); // 'MyFunction' is variable then connected to nested()
+myFunction(); // print statement
+
+// DOUBLE FUNCTION AND RETURN
+
+function nested_rtn() {
+    return function() {
+        return 'AMOGUS'; // the console.log was the outside
+    }
+}
+
+console.log(nested_rtn()()); // this is the print statement with '()()'.
