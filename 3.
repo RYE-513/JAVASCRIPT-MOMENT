@@ -1,0 +1,56 @@
+_____
+ARRAY
+_____
+
+let a = [4, 8, 15, 16, 24, 42];
+let b = ["rye", "ryan", "bscs", "jon"];
+
+console.log(a); // [4, 8, 15, 16, 24, 42];
+console.log(a[0]); // 4
+console.log(a.length); 6 items, not zero based
+
+a[0] = 7
+console.log(a) //  [7, 8, 15, 16, 24, 42];
+console.log(typeof a) // object
+
+let c = ["Rye", 513, True]
+console.log(c) // ["Rye", 513, True]
+
+c.push("amogus"); // .push, put item at the end
+console.log(c) // ["Rye", 513, True, "amogus"]
+
+c.pop // remove one item at the end
+
+_____________________
+FUNCTION DECLARATION
+_____________________
+
+function sayHello() {
+		console.log("----------");
+		console.log("RYE RYAN BSCS");
+		console.log("----------");
+}
+// sayHello()
+let a = sayHello;
+a(); // invocation
+a(); // print multiple
+
+************************
+
+function sayHi(name) {
+		console.log("----------");
+		console.log("hello " + name + "!");
+		console.log("----------");
+}
+
+sayHi("Rye");
+sayHi("Ryan");
+
+************************
+
+function calculateTax(amount) {
+             let result = amount * 0.0825;
+             return result;
+
+let tax - calculateTax(100);
+console.log(tax); // 8.25
