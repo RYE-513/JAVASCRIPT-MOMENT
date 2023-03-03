@@ -1,0 +1,170 @@
+ __________________
+| MEAN, MERN, MEVN |
+|__________________|
+
+Source: https://youtu.be/5XlYQRGgYrY
+
+"M" - MongoDB - Database Solution
+• we put the core data of our application
+• use this as a database where you can store a data
+• an alternative to other database solutions like mysql
+• the main difference is that mongodb is a nosql database
+• which means it does not work with relations not with records and tables
+• instead with documents and collections
+
+"E" - Express.js framework - NodeJs Framework
+• manipulating incoming requests
+• parsing data
+• manipulating responses
+• routing
+
+"A" "R" "V" - Angular, React, Vue - Front-End (Browser-side) JavaScript frameworks
+• these allow us to write powerful client-side "browser-side javascript"
+• the idea here is that we can build mobile app-like
+
+"N" - Node.js - JavaScript Runtime (Server-side JavaScript Code)
+• it's an environment where we can run javascript code
+• however it's not in the browser where we typically run javascript code but it can run anywhere
+• you can use "Node.js" to spin up a web server
+• and in the end write some server-side javascript code
+• you can write your entire back-end logic the entire server-side logic with JavaScript
+• same syntax use in the browser but with a different set of features you can use 
+• for example unlike in the browser on the server side you can work with files with http request and so on
+ ________________________
+| MERN - THE BIG PICTURE |
+|________________________|
+
+      FRONT-END			                                        BACK-END
+   CLIENT (BROWSER)                                          SERVER
+ 
+- React JS		                                  - MongoDB, Express.js, Node.js
+
+-> Presentation/UI		                          -> Business Logic
+-> Single-Page Application         
+				                                        • All the logic that doesn't belong to the client
+• we only get one html file	                      because of security reasons and it's to heavy to run 
+  returned by some server and		                  in the browser that to runs on the server.
+  then javascript is loaded
+  to continuosly update the                     -> Persistent Data Storage
+  html code in there
+  to re-render the ui when needed               • Store data that could be files and data in database
+					                                       "MongoDB" runs on a separate server a database
+• Single Page is not necessarily                 "web server" made up of "node" and "express" talks to the databse
+  served by Node Backend 
+					                                      • Client-side application does not directly talk to "MongoDB"
+  it could be served by our node back-end
+  be served from any server a simple static     -> Authentication Logic
+  host devices
+					                                      • Verifying password email combinations
+
+						                                    • In Client-side you can't hide your code so we do that on server side
+ ___________________________
+| HOW DAY CAN COMMUNICATE?  |
+|___________________________|
+
+      FRONT-END	               <--------->             BACK-END
+   CLIENT (BROWSER)          REQUESTS/RESPONSE          SERVER
+
+• since we built a single page application on the front-end
+  we send background requests which means we send request via javascript
+  which don't cause a re-render of the page or a reloading of the page
+  to happen or a new html.
+
+  instead we stay on the existing page in the existing javascript app
+  and just send the request and eventually get back some data 
+  which we can use and update and manipulate the existing page
+  with the help of javascript and library of framework.
+
+• this request and response we don't exchange any html code instead
+  we typically exchange data in the json format that's a machine
+  readable format based on javascript.
+
+• perfect for exchanging data like user data that was entered in the client
+  needs to be send to the server or a list of product that might be
+  storing on the server which we want to send back to the client.
+ ____________________________
+|       THE BACK-END         |
+|____________________________|
+
+• how exactly does the back end look like
+  if it does not send back html pages
+  but instead json data
+
+1. Decouple Ends
+2. Back-end == API | an interface a web server which we can send requests
+		     to trigger different actions on this backend web server
+		     and we can build such an API
+
+	 	     In two different ways
+
+		     2.A REST* API = Representational State Transfer
+				     
+				     DIFFERENT URLS + HTTP VERBS = ENDPOINTS | FOR DIFF ACTIONS
+
+				     Provide multiple entry point "endpoints".
+				     are made up of different urls and paths on our domain
+				     where our web server runs and http words which are used
+				     for the request that are sent to these urls.
+
+				     So that you could send a post request to /product
+				     for example create new product or a get request /product
+				     to return a list of products.
+
+		     2.B GraphQL API = Alternative building.
+
+				       ONE URL + HTTP VERB = ONE ENDPOINT | ACCEPTS QUERY COMMANDS
+
+				       Since you accept the post request then contains query
+				       written in a standardized query language "GraphQL"
+				       which can be parsed and understood by your web server
+				       to do different actions based on the query you wrote.
+
+      				       Now just as in the rest case it's of course up to you
+				       the developer of the API to decide which kind of queries
+				       you want to support. You don't expose your full database
+				       through thus GraphQL API to the front-end
+
+				       Instead you then run logic on the web server and then you might
+				       communicate with your database there to do anything else
+				       or send back an error if you don't support this kind of query
+
+• In both cases we execute code on the server when a request reaches our server and therefore this back-end
+  is detached from the front-end it just exposes it's end points or it's single endpoint and supported queries
+  and then any client can be conencted not just our single application but a "mobile app" can be connected
+  to the same API as well because this backend does not care about the exact client that talks to it.
+ ______________________________________________
+| WHY WOULD WE USE THE MEAN, MERN, MVEN STACK? |
+|______________________________________________|
+
+A. Separation of Concerns - strong separation of these two ends
+B. "Powerful" Frontend (SPA) - offers a great user updates experience instantly
+
+C. Flexible Backend API - does not care about the client at all but you can connect any client to it
+			  you can send requests to the right enpoints or query command to this API from any client
+			  could be your single page application built with REACT, ANGULAR, VUE.
+			  also be a mobile app built with any technology data. another server talking to your server.\
+
+D. High Performance Technologies - learning these things in different resources.
+ ____________________
+| WHICH ONE IS BEST? |
+|____________________|
+
+• Depends on the library you want to use
+• It really does not matter or to be precise it comes down to personal preferences
+• You can build web app with any of these technologies
+• There is no best or worst one
+• There are strong opinions in the community
+ __________________
+| MLAP, MLRP, MLVP |
+|__________________|
+
+M - MySQL | Database Solution
+L - Laravel | PHP Framework
+R - "A" "R" "V" | Angular, React, Vue JavaScript Framework
+P - PHP | Server-side Programming Language
+
+• You can combine all these technologies in anything you want
+• You can build yout backend with any tech stach of your choice
+• You're not limited there take the existing stacks or the popular stacks
+• Explore if they are good for you if they make sense for your next project if you like the technologies
+• Also consider alterantives.
