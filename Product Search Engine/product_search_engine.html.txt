@@ -1,0 +1,123 @@
+<!--Search: Setup Webfont with CDN | Fontawesome-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search Engine</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+    <section class="container">
+        <form>
+	   <i class="fas fa-search"></i>
+           <input type="text" name"" id="search-item" placeholder="Search Product"
+           onkeyup="search()">
+        </form>
+
+       <div class="products-list" id="products-list">
+
+            <div class="products">
+		<img src="img/t1.jpg">
+		<div class="p-details">
+		     <h2>Ph_Locals Polo 1</h2>
+		     <h3>P980</h3>
+		</div>
+            </div>
+
+
+            <div class="products">
+		<img src="img/t2.jpg">
+		<div class="p-details">
+		     <h2>Ph_Locals Polo 2</h2>
+		     <h3>P980</h3>
+		</div>
+            </div>
+
+
+            <div class="products">
+		<img src="img/t3.jpg">
+		<div class="p-details">
+		     <h2>Ph_Locals Polo 3</h2>
+		     <h3>P980</h3>
+		</div>
+            </div>
+
+
+            <div class="products">
+		<img src="img/t4.jpg">
+		<div class="p-details">
+		     <h2>Ph_Locals Polo 4</h2>
+		     <h3>P980</h3>
+		</div>
+            </div>
+
+
+            <div class="products">
+		<img src="img/t5.jpg">
+		<div class="p-details">
+		     <h2>Ph_Locals Polo 5</h2>
+		     <h3>P980</h3>
+		</div>
+            </div>
+
+
+            <div class="products">
+		<img src="img/t6.jpg">
+		<div class="p-details">
+		     <h2>Ph_Locals Polo 6</h2>
+		     <h3>P980</h3>
+		</div>
+            </div>
+
+
+            <div class="products">
+		<img src="img/t7.jpg">
+		<div class="p-details">
+		     <h2>Ph_Locals Polo 7</h2>
+		     <h3>P980</h3>
+		</div>
+            </div>
+
+
+            <div class="products">
+		<img src="img/t8.jpg">
+		<div class="p-details">
+		     <h2>Ph_Locals Polo 8</h2>
+		     <h3>P980</h3>
+		</div>
+            </div>
+
+
+            <div class="products">
+		<img src="img/t9.jpg">
+		<div class="p-details">
+		     <h2>Ph_Locals Polo 9</h2>
+		     <h3>P980</h3>
+		</div>
+            </div>
+
+
+            <div class="products">
+		<img src="img/t10.jpg">
+		<div class="p-details">
+		     <h2>Ph_Locals Polo 10</h2>
+		     <h3>P980</h3>
+		</div>
+            </div>
+
+
+       </div>
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

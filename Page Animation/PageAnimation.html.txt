@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Page Animation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+	 <div class="nav">
+	      <div class = "left">
+	          <h3>New</h3>
+	          <h2>Porfit</h2>
+	      </div>
+
+	      <div class = "right">
+	          <h3>New</h3>
+	          <h2>Porfit</h2>
+	      </div>
+	 </div>
+
+	 <div class="intro">
+	      <div class = "hero">
+
+		   <div class="left-hero">
+		     <h1>Product Designer,<br>maker, brand builder<br>-and type lover.</h1>
+		   </div>
+		   <div class="right-hero">
+		     <img src="8.jpg">s
+		   </div>
+
+	 </div>
+    </div>
+
+    <div class="slider">
+
+    </div>
+
+    <script src="https://cdnjs.cloudfire.....6nL%y0bMa!=="" crossorigin="anonymous"></script>  <!--first link cdnjs.com/libraries/gsap-->
+    <script src="app.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
