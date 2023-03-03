@@ -1,0 +1,113 @@
+ ______________________
+| 		                 |
+| COMPARING FRAMEWORKS |
+|______________________|
+
+Source: https://youtu.be/lYWYWyX04Jl
+
+• OVERVIEW
+- Philosophies
+- Syntax
+
+• WRITING CODE
+- Ease of Learning
+- Performance
+
+• POPULARITY & PROSPECTS
+- Adoption & Popularity
+- Framework Evolution
+ ______________________
+| 	                   |
+| FRAMEWORK BACKGROUND |
+|______________________|
+
+• ANGULAR = GOOGLE
+• REACT.JS = FACEBOOL
+• VUE = STANDALONE / COLLABORATORS
+ _______________
+| 	            |
+| PHILOSOPHIES  |
+|_______________|
+
+• ANGULAR | angular.io
+- HTML and JS strict separation
+- Feature-rich everything built-in
+- Rather a platform than a framework
+- Beyond code: CLI / PWA
+
+• REACT.js | reactjs.org
+- HTML and JS mixed
+- Pretty Minimalistic
+- Focused on UI-building
+- Rather a Library than a Framework
+- Community needed for Routing / http
+
+• VUE
+- HTML and JS strict separation
+- Between Angular & React | vuejs.org
+- Simply a framework / focused on code
+- Focused on code but offers CLI / more features
+ _________________________________________________________________________
+|_______FEATURE______________|_____ANGULAR_____|_____REACT_____|____VUE___|
+| UI/DOM Manipulation                YES              YES           YES   |
+| State Management                   YES              YES           YES   |
+| Routing                            YES              NO            YES   |
+| Form Validation & Handling         YES              NO            NO    |
+| HTTP Client________________________YES______________NO____________NO____|
+
+ __________________
+| 	               |
+| EASE OF LEARNING |
+|__________________|
+
+• ANGULAR
+- Complex Setup Required
+- Uses TypeScript
+- Separates HTML + TypeScript
+
+• REACT.js
+- Complex Setup
+- Uses JavaScript + JSX
+- Merges JavaScript & HTML
+
+• VUE
+- Complex Setup - now always required
+- Uses JavaScript 
+- Separates HTML + JavaScript
+ _____________
+| 	          |
+| PERFORMANCE |
+|_____________|
+
+• STARTUP PERFORMANCE
+- How fast does the web app load + become interactive?
+- Primarily influenced by initial bundle sizes
+- Don't jsut compare "Hello World" apps Typically, you build bigger apps
+
+• RUNTIME PERFORMANCE
+- How fast does thea pp respond to user inout + "run in the browser"?
+- Influenced by your code + framework "behind the scenes" workk/code
+- Don't just rely on "stupid" benchmarks (e.g. render  10,000 rows)
+ _______________________
+| 	                    |
+| ADOPTION & POPULARITY |
+|_______________________|
+
+- Google Trends
+- npm Downloads
+- Jobs
+- Github Starts
+- StackOverFlow Questions
+ _____________________
+| 	              |
+| FRAMEWORK EVOLUTION |
+|_____________________|
+
+• All three frameworks are stable but under active development
+- Frameworks are evolving step-by-step
+- New features are added over time
+- Existing features are deprecated (+ removed)
+
+• And that's a good thing! We benefit from faster and more
+  powerful frameworks. And evolution is slow enough to 
+  "leave no one behind". 
